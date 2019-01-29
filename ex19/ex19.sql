@@ -1,3 +1,2 @@
-select last_projection
-from film
-where match(id_film) against(0)
+select datediff(min(last_projection), max(last_projection))
+from film;
